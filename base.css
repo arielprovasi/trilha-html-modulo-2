@@ -1,38 +1,173 @@
-html, body {
-    margin: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 body {
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
 }
 
 .wrapper {
-    width: 1200px;
-    display: flex;
-    margin: 0 auto;
-    background-color: aquamarine;
+  display: flex;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(1, 36, 64, 1);
 }
-.main {
-    display: flex;
-    flex-flow: column;
-    width: 85%;
-}
+
 .menu {
-    width: 15%;
-    background-color: aqua;
-    padding: 10px 20px 0px;
+  width: 180px;
+  padding: 10px;
 }
+
+.menu ul {
+  display: block;
+  padding-inline-start: 10px;
+}
+
+.menu li {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: block;
+  padding: 5px;
+}
+
 .header {
-    background-color: rgb(5, 108, 108);
-    min-height: 150px;
+  height: 150px;
 }
+
+.header img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.main {
+  width: 1020px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .content {
-    background-color: white;
-    min-height: 300px;
-    padding: 20px;
+  background-color: white;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
 }
+
+.content p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
 .footer {
-    background-color: rgb(99, 56, 240);
-    min-height: 150px;
+  background-color: rgba(1, 36, 64, 1);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  height: 50px;
+}
+
+/* Estilos para a tabela */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.content th,
+.content td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+}
+
+.content th {
+  background-color: rgba(1, 36, 64, 1);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.content tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo do mapa */
+.map {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* Formulário de Contato */
+form {
+  width: 100%;
+  margin: 20px 0;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 16px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+form button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: #1b5e20;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button[type="reset"] {
+  background-color: #b71c1c;
+}
+
+form button:hover {
+  opacity: 0.9;
 }
